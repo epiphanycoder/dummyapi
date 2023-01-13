@@ -1,0 +1,35 @@
+{
+  "AppName" : "DUMMYAPI",
+  "Version": "1.0.0",
+  "Description": "Configurations for dummy api",
+  "RouteConfig": {
+    "StrictSlash": true,
+    "SkipClean": false
+  },
+  "Server": {
+    "Bind": "",
+    "Port": "9080"
+  },
+  "JwtTokenConfig": {
+    "Secret": "???",
+    "ExpiresAt": 3600
+  },
+  "AuthUserDb": {
+    "User": "admin",
+    "Password": "admin",
+    "Host": "127.0.0.1",
+    "Port": 3308,
+    "Database": "auth_db",
+    "Logging": true
+  },
+  "DummyApiConfig": {
+    "AppId": "???",
+    "BaseUrl": "https://dummyapi.io/data/v1/",
+    "UserAget": "DUMMYAPI",
+    "PageConfig": {
+      "DefaultPageSize": 50
+    }
+  },
+  "UserDataPath": "data/users.json",
+  "Indent": true
+}
