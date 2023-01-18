@@ -68,6 +68,26 @@ type logDef struct {
 	Level    string
 }
 
+func (c *Config) AppName() string {
+	return c.appName
+}
+
+func (c *Config) Version() string {
+	return c.version
+}
+
+func (c *Config) ServerDef() *ServerDef {
+	return &c.configData.Server
+}
+
+func (c *Config) AuthUserDbDef() *DbDef {
+	return &c.configData.AuthUserDb
+}
+
+func (c *Config) DummyApiDef() *DummyApiDef {
+	return &c.configData.DummyApiConfig
+}
+
 func (ld *logDef) isDebug() bool {
 	return strings.EqualFold(ld.Level, "DEBUG")
 }
