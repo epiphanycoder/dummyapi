@@ -92,6 +92,18 @@ func (ld *logDef) isDebug() bool {
 	return strings.EqualFold(ld.Level, "DEBUG")
 }
 
+func (c *Config) LogFile() string {
+	return c.configData.Logging.Filename
+}
+
+func (c *Config) LogLevel() string {
+	return c.configData.Logging.Level
+}
+
+func (c *Config) UserDataPath() string {
+	return c.configData.UserDataPath
+}
+
 // NewConfig creates the app configuration
 func NewConfg() *Config {
 	cd := loadConfig()
