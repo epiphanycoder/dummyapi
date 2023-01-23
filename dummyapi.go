@@ -16,4 +16,7 @@ func main() {
 	adb := db.NewAuthUserDb(c.AuthUserDbDef())
 	mig := data.NewMigration(adb, c.UserDataPath())
 	mig.Run()
+
+	// dummydb := db.DummyDb{}(adb, ext.NewDummyApi(c.DummyApiDef()))
+
 }
